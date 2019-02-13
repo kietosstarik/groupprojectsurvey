@@ -1,7 +1,7 @@
 /// survey part
 // 
 
-function displayMovieInfo(movieName) {
+function displayMovieInfo(movieName, movieName2, movieName3) {
 
   var queryURL = "https://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
   $.ajax({
@@ -46,6 +46,98 @@ function displayMovieInfo(movieName) {
       console.log(response);
 
     });
+    
+
+    var queryURL = "https://www.omdbapi.com/?t=" + movieName2 + "&y=&plot=short&apikey=trilogy";
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+      })
+      .then(function(response) {
+        var movieDiv = $("<div class='movie'>");
+
+        // var for title and append title to div
+        var title = response.Title;
+        var pOne = $("<p>").text("Title: " + title);
+        movieDiv.append(pOne);
+
+        // var for release and response
+        var released = response.Released;
+        var pTwo = $("<p>").text("Released: " + released);
+        movieDiv.append(pTwo);
+
+        // var for rating
+        var rating = response.Rated;
+        var pThree = $("<p>").text("Rating: " + rating);
+        movieDiv.append(pThree);
+
+        // var for plot
+        var plot = response.Plot;
+        var pFour = $("<p>").text("Plot: " + plot);
+        movieDiv.append(pFour);
+
+        // var for metascore
+        var metascore = response.Metascore;
+        var pFive = $("<p>").text("Metascore: " + metascore);
+        movieDiv.append(pFive);
+
+        // Var for poster
+        var imgURL = response.Poster;
+          var image = $("<img>").attr("src", imgURL);
+          movieDiv.append(image);
+
+        // Putting items into the div
+        $("#omdbAPI2").append(movieDiv);
+        console.log(response);
+
+      });
+
+
+      var queryURL = "https://www.omdbapi.com/?t=" + movieName3 + "&y=&plot=short&apikey=trilogy";
+      $.ajax({
+          url: queryURL,
+          method: "GET"
+        })
+        .then(function(response) {
+          var movieDiv = $("<div class='movie'>");
+  
+          // var for title and append title to div
+          var title = response.Title;
+          var pOne = $("<p>").text("Title: " + title);
+          movieDiv.append(pOne);
+  
+          // var for release and response
+          var released = response.Released;
+          var pTwo = $("<p>").text("Released: " + released);
+          movieDiv.append(pTwo);
+  
+          // var for rating
+          var rating = response.Rated;
+          var pThree = $("<p>").text("Rating: " + rating);
+          movieDiv.append(pThree);
+  
+          // var for plot
+          var plot = response.Plot;
+          var pFour = $("<p>").text("Plot: " + plot);
+          movieDiv.append(pFour);
+  
+          // var for metascore
+          var metascore = response.Metascore;
+          var pFive = $("<p>").text("Metascore: " + metascore);
+          movieDiv.append(pFive);
+  
+          // Var for poster
+          var imgURL = response.Poster;
+            var image = $("<img>").attr("src", imgURL);
+            movieDiv.append(image);
+  
+          // Putting items into the div
+          $("#omdbAPI3").append(movieDiv);
+          console.log(response);
+  
+        });
+
+
   };
 
 function convertUserZiptoLatLng(zipcode, endLatLong) {
@@ -82,8 +174,8 @@ function convertUserZiptoLatLng(zipcode, endLatLong) {
        directionsDisplay.setPanel(document.getElementById('panel'));
    
        var request = {
-         origin: start, 
-         destination: end,
+         origin: startLatLong, 
+         destination: endLatLong,
          travelMode: google.maps.DirectionsTravelMode.DRIVING
        };
    
@@ -118,40 +210,37 @@ function printArray(array) {
 $(document).ready(function(){
 
   var infoArray = [];
-
-  $("intro").hide()    
-  $("#movieSurvey_container").hide();
-  $("#omdbAPI").hide();
-  $("#googleMapAPI").hide();
-  $("second_page").toggle();
-  $("start-button").show();
-
-  $("#start_button").on("click", function(){
-
-      // Hide the start Div from the user
-      $("#startContainer").hide();
-      $("btn btn-dark btn-lg").hide();
-      $("#second_page").hide();
-      $("start_button").hide();
+  var infoArrayTwo = [];
 
 
-      // Show the Game Div
-      $("#movieSurvey_container").show();
 
-
-   ;
-  
-  });
-
-  $("#done_button").on("click", function(){
-          
-      $("#survey").toggle();
       $("#movieSurvey_container").hide();
-      $("#start_button").toggle();   
-      $("#omdbAPI").show();
-      $("#googleMapAPI").show();
-      $("#second_page").toggle();
-      var userID = $("#userID").val();
+      $("#omdbAPI").hide();
+      $("#googleMapAPI").hide();
+
+      $("#start_button").on("click", function(){
+  
+          // Hide the start Div from the user
+          $("#startContainer").hide();
+          $("#survey").hide();
+          
+          $("#start_button").hide();
+          // Show the Game Div
+          $("#movieSurvey_container").show();
+  
+  
+       ;
+      
+      });
+  
+      $("#done_button").on("click", function(){
+  
+          $("#movieSurvey_container").hide();
+          $("#omdbAPI").show();
+          $("#omdbAPI2").show();
+          $("#omdbAPI3").show();
+          $("#googleMapAPI").show();
+          var userID = $("#userID").val();
           
           console.log(userID);
           
@@ -313,13 +402,23 @@ $(document).ready(function(){
       //infoArray[3] is movie location
       infoArray.push(movieObject[i].latLong);
   }
+  //this if function grabs the other 2 movies to use as a recommendation for repeating elements
+       if (movieObject[i].genre === genreVar &&
+  movieObject[i].length === lengthVar &&
+  movieObject[i].rating != ratingVar) {
+    infoArrayTwo.push(movieObject[i].name);
+    
+    infoArrayTwo.push(movieObject[i].latLong);
+  }
   };   
       console.log(infoArray);
+      console.log(infoArrayTwo);
 
       //code the api thingy that will push the movie to the omdbAPI
-      displayMovieInfo(infoArray[2]);
+      displayMovieInfo(infoArray[2], infoArrayTwo[0], infoArrayTwo[2]);
       convertUserZiptoLatLng(infoArray[1], infoArray[3]);
       printArray(infoArray);
       });
 
   });
+
