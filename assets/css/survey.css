@@ -1,0 +1,34 @@
+body
+{
+    text-align: center;
+}
+.logo
+{
+    align-content: center;
+    width:70%;
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+}
+.result {
+    width: 60%;
+}
+.jumbotron {
+    width: 70%;
+    align-content: center;
+    margin: auto;
+}
+.custom-jumbo {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
+.custom-button {
+    display: inline-block !important;
+}
+/* div#footer {
+	clear: both;
+	margin-top: 40px;
+	position: center;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+} */
