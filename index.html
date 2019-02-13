@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,82 +11,96 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
-
 <body>
-    <div class="jumbotron">
-        <div class="container logo">
-            <h1>
-                <center>Surveys for Movies</center>
-            </h1>
-        </div>
-    </div>
-
-    <div class="jumbotron jumbotron-fluid custom-jumbo">
-        <div class="startContainer">
-            <div id="survey">
-                <p id="intro">Welcome to Survey for Movies. Start your free survey below to get your ideal travel
-                    destinations with travel information based off your movie interests.</p>
-                <p id="start-survey" class="lead">Click below and start your survey!</p>
-            </div>
-
-            <div class="row custom-button">
-                <div id="start_button" class="text-center">
-                    <button id="start_button" class="btn btn-dark btn-lg">Start</button>
-                    <!-- this button will hide the startContainer and show the movieSurvey_container -->
+     <nav class="navbar navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-target="#navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navdrop" role="button" data-toggle="dropdown" data-hover="dropdown">Surveys</a>
+                            <div class="dropdown-menu" aria-labelledby="navdrop">
+                                <a href="#" class="dropdown-item">Video Game Survey</a>
+                                <a href="#" class="dropdown-item">Music Survey</a>
+                                <a href="#" class="dropdown-item">Other Services</a>
+                            </div>
+                            
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                                <a href="#" class="nav-link">Reset Survey</a>
+                        </li>
+                    </ul>
                 </div>
-
-
-                <!-- survey is in this div that starts hiden then will be shown -->
-                <div id="movieSurvey_container">
-                    <!-- logo again to use -->
-                    <h1 class="logo">Movie Goer Survey</h1>
-                    <!-- questions will go here -->
-                    <form id="frm1" action="/action_page.php">
-                        Enter Name: <input type="text" id="userID" placeholder="Name"><br>
-                        Enter Zipcode: <input type="text" id="userZipcode" placeholder="Zipcode"><br><br>
-                    </form>
-                    <h3>1. What is your preferred movie genre?</h3>
-                    <!-- var for genre is taken from here -->
-                    <input type="radio" name="genreVar" value="Action">Action
-                    <input type="radio" name="genreVar" value="Documentery">Documentery
-                    <input type="radio" name="genreVar" value="Romance">Romance
-
-
-                    <h3>2. What is your preferred movie length?</h3>
-                    <!-- var for length is taken from here -->
-                    <input type="radio" name="lengthVar" value="Shorter">Shorter
-                    <input type="radio" name="lengthVar" value="Longer">Longer
-
-                    <h3>3. What is your preferred movie rating?</h3>
-                    <!-- var for rating is taken from here -->
-                    <input type="radio" name="ratingVar" value="PG">PG
-                    <input type="radio" name="ratingVar" value="PG13">PG13
-                    <input type="radio" name="ratingVar" value="R">R
-
-
-                    <h3>Click Done! when finished</h3>
-                    <button id=done_button>Done!</button>
+            </nav>
+                <div class="jumbotron" style= "background-color: dimgray">
+                    <div class="container logo">
+                        <h1>
+                            <center>Surveys for Movies</center>
+                        </h1>
+                    </div>
                 </div>
-                <div id="last-page">
-                <div id=omdbAPI></div>
-                <div id=omdbAPI2></div>
-                <div id=omdbAPI3></div>
-                <div id = googleMapAPI>
-                    <div id = map style="width: 280px; height: 400px; float: left;"></div>
-                    <div id = panel style="width: 300px; float: right;"></div>
-                </div>
-                <div id=googlemapAPI2></div>
-                </div>
-                    
+                <div class="jumbotron jumbotron-fluid custom-jumbo" style= "background-color: dimgray">
+                    <div class="startContainer"></div>
+                        <div id="survey">
+                            <p id="intro">Welcome to Survey for Movies. Start your free survey below to get your ideal
+                                travel
+                                destinations with travel information based off your movie interests.</p>
+                            <p id="start-survey" class="lead">Click below and start your survey!</p>
+                        </div>
+                        <div class="row custom-button">
+                            <div id="start_button" class="text-center">
+                                <button id="start_button" class="btn btn-dark btn-lg">Start</button>
+                                <!-- this button will hide the startContainer and show the movieSurvey_container -->
+                            </div>
+                            <!-- survey is in this div that starts hiden then will be shown -->
+                            <div id="movieSurvey_container">
+                                <!-- logo again to use -->
+                                <h1 class="logo">Movie Goer Survey</h1>
+                                <!-- questions will go here -->
+                                <form id="frm1" action="/action_page.php">
+                                    Enter Name: <input type="text" id="userID" value="Name"><br>
+                                    Enter Zipcode: <input type="text" id="userZipcode" value="Zipcode"><br><br>
+                                </form>
+                                <h3>1. What is your preferred movie genre?</h3>
+                                <!-- var for genre is taken from here -->
+                                <input type="radio" name="genreVar" value="Action">Action
+                                <input type="radio" name="genreVar" value="Documentery">Documentery
+                                <input type="radio" name="genreVar" value="Romance">Romance
+                                <h3>2. What is your preferred movie length?</h3>
+                                <!-- var for length is taken from here -->
+                                <input type="radio" name="lengthVar" value="Shorter">Shorter
+                                <input type="radio" name="lengthVar" value="Longer">Longer
+                                <h3>3. What is your preferred movie rating?</h3>
+                                <!-- var for rating is taken from here -->
+                                <input type="radio" name="ratingVar" value="PG">PG
+                                <input type="radio" name="ratingVar" value="PG13">PG13
+                                <input type="radio" name="ratingVar" value="R">R
+                                <h3>Click Done! when finished</h3>
+                                <button id=done_button>Done!</button>
+                            </div>
+                            <div id=omdbAPI></div>
+                            <div id=omdbAPI2></div>
+                            <div id=omdbAPI3></div>
+                            <div id=googleMapAPI>
+                                <div id=map style="width: 280px; height: 400px; float: left;"></div>
+                                <div id=panel style="width: 300px; float: right;"></div>
+                            </div>
+                            <div id=googleMapAPI2></div>
+                            </footer>
+
+
 </body>
-
 </html>
 </div>
-
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
     integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"> </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDClN8Ffd-K6dipkrlD1CjZZTdyvSq4z98&callback=initMap"></script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDClN8Ffd-K6dipkrlD1CjZZTdyvSq4z98&callback=initMap"></script>
 <script src="assets/js/main.js"></script>
 </body>
-
 </html>
