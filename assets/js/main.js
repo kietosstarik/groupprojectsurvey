@@ -353,7 +353,7 @@ $(document).ready(function(){
       genre: 'Documentery',
       length: 'Shorter',
       rating: "PG",
-      latLong: {lat: 34.052, lng: 118.243},
+      latLong: {lat: 34.052, lng: -118.243},
   },
    {
       name: 'The Memory of Justice',

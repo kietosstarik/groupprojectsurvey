@@ -24,11 +24,9 @@ body
 .custom-button {
     display: inline-block !important;
 }
-/* div#footer {
-	clear: both;
-	margin-top: 40px;
-	position: center;
-	bottom: 0;
-	left: 0;
-	text-align: center;
-} */
+#last-page {
+    width: 50%;
+    text-align: center;
+    position: relative;
+    margin-left: 25%;
+}
