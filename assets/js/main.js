@@ -82,8 +82,8 @@ function convertUserZiptoLatLng(zipcode, endLatLong) {
          directionsDisplay.setPanel(document.getElementById('panel'));
      
          var request = {
-           origin: startLatLong, 
-           destination: endLatLong,
+           origin: start, 
+           destination: end,
            travelMode: google.maps.DirectionsTravelMode.DRIVING
          };
      
