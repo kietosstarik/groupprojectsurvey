@@ -142,7 +142,7 @@ function displayMovieInfo(movieName, movieName2, movieName3) {
 
 function convertUserZiptoLatLng(zipcode, endLatLong) {
   console.log(zipcode)
-  var clientKey = "OqkhVAmY7yXA3au2rFUEwQNQTgiPmHyBLME30p0PmuA0ylPEjSMjDmKRm6sde58W";
+  var clientKey =   "QmickmMnvv1kDXEi9xhlBS4tq6HtlE3AhtRwW5k5EOFBoJi2SaYAbD9AOw2eQNqL";
 
   var zipAPIUrl = "https://www.zipcodeapi.com/rest/"+clientKey+"/info.json/" + zipcode + "/degrees";
   
@@ -353,7 +353,7 @@ $(document).ready(function(){
       genre: 'Documentery',
       length: 'Shorter',
       rating: "PG",
-      latLong: {lat: 34.052, lng: 118.243},
+      latLong: {lat: 34.052, lng: -118.243},
   },
    {
       name: 'The Memory of Justice',
