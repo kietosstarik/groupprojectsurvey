@@ -54,3 +54,8 @@ heroku --version
 heroku login
 
 Use your credentials from the earlier account creation.
+
+![screen shot 2019-02-14 at 12 36 52 pm](https://user-images.githubusercontent.com/46514256/52810195-a335a280-3057-11e9-9a29-f1168def1dd6.png)
+![screen shot 2019-02-14 at 12 37 10 pm](https://user-images.githubusercontent.com/46514256/52810196-a335a280-3057-11e9-898d-856e930f875b.png)
+![screen shot 2019-02-14 at 12 38 06 pm](https://user-images.githubusercontent.com/46514256/52810197-a335a280-3057-11e9-9671-f5bc59b7f885.png)
+
