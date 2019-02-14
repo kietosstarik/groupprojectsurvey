@@ -121,8 +121,8 @@ img {
     font-size: 40px;
 }
 
-#pannel {
-    color: orange;
+#panel {
+    background-color: white;
 }
 #errorMessage {
     color: red;
