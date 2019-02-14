@@ -113,6 +113,7 @@ img {
     margin: auto;
     margin-top: 10px;
 }
+
 #backButton {
     border-radius: 20px;
     padding: 10px; 
@@ -129,4 +130,16 @@ margin-bottom: 10px;
 #map {
     margin: auto;
     margin-top: 10px;
+}
+
+
+#panel {
+    background-color: white;
+}
+#errorMessage {
+    color: red;
+}
+
+#errorMessage2 {
+    color: red;
 }
