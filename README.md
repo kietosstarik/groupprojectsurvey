@@ -12,9 +12,9 @@ This project was created as a group assignment for the Coding Bootcamp at U of M
 Its contributors include:
 
 Drew Brooksbank
-Case Pollack
-Michael Rutersmith
-Tasha Schrader
+Case Pollock
+Michael Smith
+Tasha Shrader
 Jennifer Wong
 
 -----------------------------------------------------
