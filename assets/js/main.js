@@ -233,6 +233,9 @@ $(document).ready(function () {
 
   });
   $("#done_button").on("click", function () {
+
+    $("#backButton").hide();
+
     var userZipcode = $("#userZipcode").val();
     var userID = $("#userID").val();
     var genreVar = $('input:radio[name="genreVar"]:checked').val();
@@ -254,6 +257,7 @@ $(document).ready(function () {
 
     else  {
   
+
 
     $("#movieSurvey_container").hide();
     $("#omdbAPI").show();
@@ -282,6 +286,7 @@ $(document).ready(function () {
 
     infoArray.push(userID);
     infoArray.push(userZipcode);
+    $("#title").html(userID + "! here are your movie and destination suggestions");
 
     var movieObject = [
       {
@@ -447,19 +452,26 @@ $(document).ready(function () {
 $("#directions").on("click", function () {
   $("#movieSurvey_container").hide();
   $("#omdbAPI").hide();
-
   $("#startContainer").hide();
   $("#survey").hide();
   $("#start_button").hide();
   $("#omdbAPI").hide();
   $("#omdbAPI2").hide();
   $("#omdbAPI3").hide();
-
+  $("#backButton").show();
   $("#directions").hide();
   $("#googleMapAPI").show();
   $("#panel").show();
+  $("#title").html("Directions!");
+})
 
-
-
-
+$("#backButton").on("click", function () {
+  $("#backButton").hide();
+  $("#movieSurvey_container").hide();
+  $("#omdbAPI").show();
+  $("#omdbAPI2").show();
+  $("#omdbAPI3").show();
+  $("#googleMapAPI").show();
+  $("#panel").hide();
+  $("#directions").show();
 })
