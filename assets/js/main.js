@@ -227,13 +227,33 @@ $(document).ready(function () {
     $("#start_button").hide();
     // Show the Game Div
     $("#movieSurvey_container").show();
-
-
+    $("#errorMessage").hide();
+    $("#errorMessage2").hide();
     ;
 
   });
-
   $("#done_button").on("click", function () {
+    var userZipcode = $("#userZipcode").val();
+    var userID = $("#userID").val();
+    var genreVar = $('input:radio[name="genreVar"]:checked').val();
+    var lengthVar = $('input:radio[name="lengthVar"]:checked').val();
+    var ratingVar = $('input:radio[name="ratingVar"]:checked').val();
+
+    if (userZipcode.length != 5 ||  isNaN(userZipcode) === true || userID === '') {
+      $("#errorMessage").show();  
+    }
+    if (userZipcode.length === 5 &&  isNaN(userZipcode) === false && userID != '') {
+      $("#errorMessage").hide();  
+    }
+    if (genreVar != "Action" && genreVar != "Documentery" && genreVar != 'Romance'
+     && lengthVar != 'Shorter'  && lengthVar != 'Longer' 
+     && ratingVar != 'PG' && ratingVar != 'PG13' && ratingVar !='R') {
+      $("#errorMessage2").show();
+    }
+  
+
+    else  {
+  
 
     $("#movieSurvey_container").hide();
     $("#omdbAPI").show();
@@ -419,8 +439,9 @@ $(document).ready(function () {
     convertUserZiptoLatLng(infoArray[1], infoArray[3]);
     printArray(infoArray);
     $("#panel").hide();
-  });
-
+  };
+    
+});
 });
 
 $("#directions").on("click", function () {
