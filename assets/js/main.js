@@ -458,8 +458,4 @@ $("#directions").on("click", function () {
   $("#directions").hide();
   $("#googleMapAPI").show();
   $("#panel").show();
-
-
-
-
 })
