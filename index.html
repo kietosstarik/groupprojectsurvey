@@ -68,6 +68,7 @@
                 <form id="frm1" action="/action_page.php">
                     Enter Name: <input type="text" id="userID" placeholder="Name"><br>
                     Enter Zipcode: <input type="text" id="userZipcode" placeholder="Zipcode"><br><br>
+                    <div id="errorMessage"><b>Please enter your Name and a valid Zipcode</b></div>
                 </form>
                 <h3>1. What is your preferred movie genre?</h3>
                 <!-- var for genre is taken from here -->
@@ -83,6 +84,10 @@
                 <input type="radio" name="ratingVar" value="PG">PG
                 <input type="radio" name="ratingVar" value="PG13">PG13
                 <input type="radio" name="ratingVar" value="R">R
+                <div id="errorMessage2"><b>
+                    Please Fill out the survey completely.
+                </b>
+                </div>
                 <h3>Click Done! when finished</h3>
                 <button id=done_button>Done!</button>
             </div>
