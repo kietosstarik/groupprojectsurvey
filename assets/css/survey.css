@@ -1,20 +1,20 @@
 body
 {
-    text-align: center;
-    background: url(https://wallpaper.wiki/wp-content/uploads/2017/05/wallpaper.wiki-Beautiful-Full-HD-Wallpaper-Download-Free-PIC-WPE0010098.jpg) no-repeat 50% 50%;
-    background-size: cover;
+text-align: center;
+background: url(https://media.giphy.com/media/1u5vnhGYCUIKc/giphy.gif);
+height: 100%;
 }
 .logo
 {
-    align-content: center;
-    width:70%;
-    color: whitesmoke;
+align-content: center;
+width:70%;
+color: whitesmoke;
 }
 .navbar{
-    background: -moz-linear-gradient(top, #45484d 0%, #000000 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    margin-bottom: 10px;
+background: -moz-linear-gradient(top, #45484d 0%, #000000 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+margin-bottom: 10px;
 }
 .nav-item::after{content:'';display:block;width:0px;height:2px;background:maroon;transition: 0.2s;}
 .nav-item:hover::after{width:100%;}
@@ -23,123 +23,168 @@ body
 .dropdown-item.active, .dropdown-item:active{color: #23282e;}
 .dropdown-item:focus, .dropdown-item:hover{background:maroon;} 
 .result {
-    width: 60%;
+width: 60%;
 }
 .jumbotron {
-    
-    width: 77%;
-    align-content: center;
-    margin: auto;
-    font-family: 'Times New Roman', Times, serif;
-    border-radius: 25px;
-
-    color: whitesmoke;
-    background: -moz-linear-gradient(top, #45484d 0%, #000000 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
-
-
-
+width: 77%;
+align-content: center;
+margin: auto;
+font-family: 'Times New Roman', Times, serif;
+border-radius: 25px;
+color: whitesmoke;
+background: -moz-linear-gradient(top, #45484d 0%, #000000 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 .custom-jumbo {
-    text-align: center;
-    width: 77%;
-    margin: auto;
-    color: whitesmoke;
+text-align: center;
+width: 77%;
+margin: auto;
+color: whitesmoke;
 }
 .startContainer {
-    background-color:  #23282e;
-    border-radius: 25px;
-    color: whitesmoke;
-    }
+background-color:  #23282e;
+border-radius: 25px;
+color: whitesmoke;
+}
 .custom-button {
-    display: inline-block !important;
-    border-radius: 20px;
-    padding: 20px; 
-    margin-bottom: 10px;
+display: inline-block !important;
+border-radius: 20px;
+padding: 20px; 
+margin-bottom: 10px;
 }
-#userID {
-    border-radius: 20px;
-    padding: 10px; 
-    margin-bottom: 10px;
-}
-#userZipcode {
-    margin-top: 10px;
-    border-radius: 20px;
-    padding: 10px; 
-    margin-bottom: 10px;
-}
-#done_button {
-    border-radius: 10px;
-    padding: 10px; 
-    margin-bottom: 10px;
-}
-.jumbotron jumbotron-fluid custom-jumbo {
-    background-color: #23282e;      
-}
-
-
-#round {
-    border-radius: 20px;
-    padding: 20px; 
-    margin-bottom: 10px;
+#beginning {
+    margin-top: 20px;
 }
 #title {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 70px;
     text-align: center;
-    margin: auto;
 }
-
-
+#intro {
+    font-family: 'Arvo', serif;
+    text-align: center;
+font-size: 35px;
+padding-bottom: 30px;
+padding-top: 70px;
+color: black;
+}
+#start-survey {
+font-family: 'Arvo', serif;
+color: slategray;
+font-size: 25px;
+padding-bottom: 30px;
+}
+#start_button {
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: 'Arvo', serif;
+}
+.custom-button {
+    padding-bottom: 70px;
+}
+#userID {
+border-radius: 20px;
+padding: 10px; 
+margin-bottom: 10px;
+}
+#userZipcode {
+margin-top: 10px;
+border-radius: 20px;
+padding: 10px; 
+margin-bottom: 10px;
+}
+#done_button {
+border-radius: 10px;
+padding: 10px; 
+margin-bottom: 10px;
+font-size: 20px;
+font-family: 'Arvo', serif;
+}
+.jumbotron jumbotron-fluid custom-jumbo {
+background-color: #23282e;      
+}
+#round {
+border-radius: 20px;
+padding: 20px; 
+margin-bottom: 10px;
+}
+#title {
+text-align: center;
+margin: auto;
+}
+#frm1 {
+    font-family: 'Righteous', cursive;
+}
+#movieSurvey_container {
+font-family: 'Ubuntu Condensed', sans-serif;
+margin-bottom: 10px;
+}
+radio {
+    margin-right: 10px;
+}
+#userID {
+    text-align: center;
+}
+#userZipcode {
+    text-align: center;
+}
 img {
-    width:280px;
-    height: 400px;
-    margin:auto;
+width:280px;
+height: 400px;
+margin:auto;
 }
-
 #panel {
-    background-color: white;
-    margin: auto;
+background-color: white;
+margin: auto;
 }
-
+#last {
+ font-family: 'Rubik', sans-serif;
+ margin: auto;
+ width: 70%;
+}
 #directions {
-    border-radius: 20px;
-    padding: 10px; 
-    margin-bottom: 10px;
-    width: 200px;
-    background-color: white;
-    color: black;
-    text-align: center;
-    margin: auto;
-    margin-top: 10px;
+border-radius: 20px;
+padding: 10px; 
+margin-bottom: 10px;
+width: 200px;
+background-color: white;
+color: black;
+text-align: center;
+margin: auto;
+margin-top: 10px;
+font-size: 20px;
+font-family: 'Arvo', serif;
 }
-
 #backButton {
-    border-radius: 20px;
-    padding: 10px; 
-    margin-bottom: 10px;  
-    width: 200px;
-    background-color: black;
-    color: whitesmoke;
-    color: whitesmoke;
-    margin-bottom: 10px;
+border-radius: 20px;
+padding: 10px; 
+margin-bottom: 10px;  
+width: 280px;
+background-color: black;
+color: whitesmoke;
+color: whitesmoke;
+margin-bottom: 10px;
 text-align: center;
 margin: auto;
 margin-bottom: 10px;
+font-size: 20px;
+font-family: 'Arvo', serif;
 }
 #map {
-    margin: auto;
-    margin-top: 10px;
+margin: auto;
+margin-top: 10px;
 }
-
-
 #panel {
-    background-color: white;
+background-color: white;
 }
 #errorMessage {
-    color: red;
+color: rgb(197, 197, 89);
+font-family: 'Work Sans', sans-serif;
+font-size: 20px;
 }
-
 #errorMessage2 {
-    color: red;
+color:rgb(197, 197, 89);
+font-family: 'Work Sans', sans-serif;
+font-size: 20px;
 }
