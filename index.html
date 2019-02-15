@@ -11,49 +11,25 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css?family=Amatic+SC|Anton|Arvo|Dancing+Script|Fjalla+One|Hanalei+Fill|Inconsolata|Noto+Serif|Pacifico|Righteous|Rubik|Shadows+Into+Light|Staatliches|Ubuntu+Condensed|Work+Sans|ZCOOL+QingKe+HuangYou"
+        rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <button class="navbar-toggler" type="button" data-target="#navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav">
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navdrop" role="button" data-toggle="dropdown"
-                        data-hover="dropdown">Surveys</a>
-                    <div class="dropdown-menu" aria-labelledby="navdrop">
-                        <a href="#" class="dropdown-item">Video Game Survey</a>
-                        <a href="#" class="dropdown-item">Music Survey</a>
-                        <a href="#" class="dropdown-item">Other Services</a>
-                    </div>
-
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Reset Survey</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="jumbotron" style="background-color: dimgray" id="round">
-
+    <div class="jumbotron-top" style="background-color: dimgray" id="round">
         <h1 id="title">
             Surveys for Movies
         </h1>
-
     </div>
     <div class="jumbotron jumbotron-fluid custom-jumbo" style="background-color: dimgray" id="round">
         <div class="startContainer"></div>
         <div id="survey">
-            <p id="intro">Welcome to Survey for Movies. Start your free survey below to get your ideal
+            <p id="intro">Welcome to Survey for Movies. <br> Start your free survey below to get your ideal
                 travel
-                destinations with travel information based off your movie interests.</p>
-            <p id="start-survey" class="lead">Click below and start your survey!</p>
+                destinations <br> and travel information based off your movie interests.</p>
+            <br>
+            <p id="start-survey" class="lead">Click below to start your survey!</p>
         </div>
         <div class="row custom-button">
             <div id="start_button" class="text-center">
@@ -66,30 +42,31 @@
                 <h1 class="logo"></h1>
                 <!-- questions will go here -->
                 <form id="frm1" action="/action_page.php">
-                    Enter Name: <input type="text" id="userID" placeholder="Name"><br>
-                    Enter Zipcode: <input type="text" id="userZipcode" placeholder="Zipcode"><br><br>
+                    Enter Your Name: <input type="text" id="userID" placeholder="Name"><br>
+                    Enter Your Zipcode: <input type="text" id="userZipcode" placeholder="for travel route"><br><br>
                     <div id="errorMessage"><b>Please enter your Name and a valid Zipcode</b></div>
                 </form>
                 <h3>1. What is your preferred movie genre?</h3>
                 <!-- var for genre is taken from here -->
-                <input type="radio" name="genreVar" value="Action">Action
-                <input type="radio" name="genreVar" value="Documentery">Documentery
+                <input type="radio" name="genreVar" value="Action">Action &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="genreVar" value="Documentery">Documentery &nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="radio" name="genreVar" value="Romance">Romance
                 <h3>2. What is your preferred movie length?</h3>
                 <!-- var for length is taken from here -->
-                <input type="radio" name="lengthVar" value="Shorter">Shorter
+                <input type="radio" name="lengthVar" value="Shorter">Shorter &nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="radio" name="lengthVar" value="Longer">Longer
                 <h3>3. What is your preferred movie rating?</h3>
                 <!-- var for rating is taken from here -->
-                <input type="radio" name="ratingVar" value="PG">PG
-                <input type="radio" name="ratingVar" value="PG13">PG13
+                <input type="radio" name="ratingVar" value="PG">PG &nbsp;&nbsp;
+                <input type="radio" name="ratingVar" value="PG13">PG13 &nbsp;&nbsp;
                 <input type="radio" name="ratingVar" value="R">R
                 <div id="errorMessage2"><b>
-                    Please Fill out the survey completely.
-                </b>
+                        Please Fill out the survey completely.
+                    </b>
                 </div>
                 <h3>Click Done! when finished</h3>
-                <button id=done_button>Done!</button>
+                <button id="done_button">Done!</button>
+
             </div>
             <div id="last">
                 <div id="omdbAPI"></div>
@@ -97,25 +74,11 @@
                 <div id="omdbAPI3"></div>
             </div>
             <div id="googleMapAPI">
-                    <div id="backButton">click to go back!</div>
+                <div id="backButton">click to go back!</div>
                 <div id="map" style="width: 280px; height: 400px;"></div>
-
                 <div id="directions">click for directions!</div>
-
-                
-
-
                 <div id="panel" style="width: 280px;"></div>
-
-
-              
-
-
-                <div id=googleMapAPI2></div>
             </div>
-
-
-
 </body>
 
 </html>
